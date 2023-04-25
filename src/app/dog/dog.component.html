@@ -4,18 +4,20 @@
   </div>
   <div class="row m-3">
     <div class="col">
-      <img src="https://images.dog.ceo/breeds/deerhound-scottish/n02092002_2448.jpg" alt="seila"
+      <img [src]="dog.message"
       width="200px"
-      class="shadow rowded"
-      />
+      class="shadow rounded">
   </div>
+</div>
   <div class="row m-3">
     <div class="col">
-     bower
+      <span *ngFor="let name of getName()">
+            {{name | titlecase}}
+      </span>
 </div>
 
 <div class="row m-3">
   <div class="col">
-   <button class="btn btn-primary" >Proximo</button>
+   <button class="btn btn-primary" (click)="loadDog()">Proximo</button>
 </div>
 </div>
